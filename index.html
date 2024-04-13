@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="server-list">
+                <h2>Servers</h2>
+                <ul>
+                    <!-- Servers list goes here -->
+                </ul>
+            </div>
+            <div class="channel-list">
+                <h2>Text Channels</h2>
+                <ul>
+                    <!-- Text Channels list goes here -->
+                </ul>
+                <h2>Voice Channels</h2>
+                <ul class="voice-channel-list">
+                    <!-- Voice Channels list goes here -->
+                </ul>
+            </div>
+            <div class="voice-chat">
+                <h2>Voice Chat</h2>
+                <div class="voice-chat-controls">
+                    <select id="voice-channel-select">
+                        <!-- Voice Channels options go here -->
+                    </select>
+                    <button id="join-voice-btn">Join Voice</button>
+                    <button id="leave-voice-btn" disabled>Leave Voice</button>
+                    <input type="range" id="volume-control" min="0" max="100" step="1" value="100">
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat-messages" id="chat-messages">
+                <!-- Chat messages go here -->
+            </div>
+            <div class="message-input-container">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+                <input type="file" id="file-input" style="display: none;">
+                <button id="attach-btn">Attach</button>
+                <div class="voice-chat">
+                    <!-- Остальные элементы голосового чата -->
+                    <button id="record-audio-btn">Record Audio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="register-btn">Register</button>
+    <span id="username-display" style="display: none;"></span>
+    <script src="script.js"></script>
+</body>
+</html>
